@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto+Mono:wght@500&display=swap');
+
+html,body{
+    margin:0px;
+    height:100%;
+
+    font-size:large;
+}
+
+body{
+    font-family:'Roboto Mono','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(255, 246, 234);
+}
+
+.outer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+    height:100%;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+}
+
+.heading{
+    margin-bottom:20px;
+    font-size:20px;
+}
+
+.form{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.face{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size:100px;
+    margin-bottom:40px;
+}

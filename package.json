@@ -1,0 +1,17 @@
+{
+  "name": "weather_application",
+  "version": "1.0.0",
+  "description": "This is a Weather Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shubham Tiwari",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "requests": "^0.3.0"
+  }
+}

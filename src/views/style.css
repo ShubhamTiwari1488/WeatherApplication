@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto+Mono:wght@500&display=swap');
+
+html,body{
+    height:100%;
+    margin:0px;
+}
+
+body{
+    font-family:'Roboto Mono','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(255, 246, 234);
+}
+
+
+.outer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    height:100%;
+}
+
+.container{
+    border:2px solid steelblue;
+    border-radius:10%;
+    display:flex;
+    flex-direction:column;
+    width:fit-content;
+    width:25%;
+    height:50%;
+
+    background-color: rgb(217, 233, 247);
+}
+
+.container > *{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100%;
+}
+
+.bottom-line {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+.bottom-line > *{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+}
+
+.symbol{
+    font-size:80px;
+    /* color:rgb(179, 179, 179) */
+}
+
+.city,.temp{
+    text-align:center;
+    font-size:25px;
+}
+
+
+.wind-speed{
+    display:flex;
+    flex-direction:row;
+}
+
+.weather{
+    font-size:25px;
+}
+
+@media screen and (max-width:822px){
+    .wind{
+        display:none;
+    }
+
+    .weather{
+        display:none;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Weather Application</title>
+</head>
+<body>
+    <div class="outer">
+        <div class="container">
+        <div class="city"><%= city %></div>
+        <div class="symbol"><span class="fabIcon"><i class="<%= icon %>"></i></span><span class="weather">&nbsp;<%= weather %></span></div>
+        <div class="temp"><%= temp %>&deg;C</div>
+        <div class="bottom-line">
+            <div class="wind-speed"><span class="wind">Wind :&nbsp;</span><%= windSpeed %>km/hr</div>
+            <div class="country"><%= country %></div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        const weatherVal = document.querySelector(".weather");
+        const icon = document.querySelector(".fabIcon");
+
+        console.log(weatherVal);
+        console.log(icon);
+
+        var weather_word = weatherVal.textContent.trim();
+
+        console.log(weather_word);
+
+        if(weather_word == 'Clear'){
+            icon.style.color="gold";
+        }
+
+        if(weather_word == 'Rain'){
+            icon.style.color="skyblue";
+        }
+
+        if(weather_word == 'Clouds' || weather_word == 'Haze'){
+            icon.style.color="rgb(179, 179, 179)";
+        }
+
+        if(weather_word == 'Snow'){
+            icon.style.color="snow";
+        }
+
+    </script>
+</body>
+</html>
