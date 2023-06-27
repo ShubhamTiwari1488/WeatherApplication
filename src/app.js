@@ -14,6 +14,7 @@ var windSpeed ; //It will store wind speed
 var temp ; //It will store temp
 var weather ; //whether it is sunny or cloudy , etc
 var obj ; //will store the objects
+var code ; //It will check whether the api call is valid or not
 
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -48,27 +49,37 @@ app.post("/",(req,res) => {
     api.on('data',(chunk) => {
         obj = JSON.parse(chunk);
 
-        //Extracting the values
-        city = obj.name;
-        temp = (obj.main.temp-273.15).toPrecision(2);
-        country = obj.sys.country;
-        weather = obj.weather[0].main;
-        windSpeed = obj.wind.speed;
+        code = obj.cod;
 
         console.log(chunk);   
         console.log(obj);
     });
 
     api.on('end',()=>{
-        console.log("end");
 
-        console.log(city);
-        console.log(temp);
-        console.log(windSpeed);
-        console.log(country);
-        console.log(weather);
+         //Extracting the values if the api call is valid
+        if(code == "200"){
+            city = obj.name;
+            temp = (obj.main.temp-273.15).toPrecision(2);
+            country = obj.sys.country;
+            weather = obj.weather[0].main;
+            windSpeed = obj.wind.speed;
 
-        res.redirect(302,'./weather');
+            console.log("end");
+
+            console.log(city);
+            console.log(temp);
+            console.log(windSpeed);
+            console.log(country);
+            console.log(weather);
+
+            res.redirect(302,'./weather');
+        }
+
+        else if(code == '404'){
+            res.redirect(302,'/error')
+        }
+        
     });
    
 });
