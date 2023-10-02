@@ -1,6 +1,7 @@
 ## This is a Weather Application. 
-###    - I have used Node.js as the backend.
-###    - I have used openWeatherAPI for fetching the weather data
+####    - I have used Node.js as the backend.
+####    - I have used openWeatherAPI for fetching the weather data
+
 
 ## Screenshots of the application :-
 ### 1. Opening Screen LookUp :-
